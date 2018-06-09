@@ -11,7 +11,7 @@ neb.net requires the following:
 - RestSharp v106.3.0 or later
 
 ## Installation
-Make sure you have installed Newtonsoft.Json and RestSharp:
+Make sure you have installed Newtonsoft.Json and RestSharp lastest version:
 
 ![Libraries](/media/help-1.png)
 
