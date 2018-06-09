@@ -11,19 +11,21 @@ neb.net requires the following:
 - RestSharp v106.3.0
 
 ## Installation
-
+...
 
 ## Usage
 
-please refer to [examples](/example) to learn how to use neb.net.
+...
 
 #### API
 GetNebState:
-```public NebState GetNebState()
+```
+public NebState GetNebState()
 ```
 
 GetAccountState
-```public AccountState GetAccountState(string address, Int64 height = 0)
+```
+public AccountState GetAccountState(string address, Int64 height = 0)
 ```
 
 ## Join in!
