@@ -15,15 +15,12 @@ neb.net requires the following:
 
 ## Usage
 
-...
-
-#### API
 GetNebState:
 ```
 public NebState GetNebState()
 ```
 
-GetAccountState
+GetAccountState:
 ```
 public AccountState GetAccountState(string address, Int64 height = 0)
 ```
