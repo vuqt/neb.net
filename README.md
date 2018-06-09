@@ -11,11 +11,14 @@ neb.net requires the following:
 - RestSharp v106.3.0
 
 ## Installation
-...
+Make sure you have installed Newtonsoft.Json and RestSharp:
+![Libraries](/media/help-1.png)
+
+Add [NebulasAPI.dll](/build/latest) to your project
 
 ## Usage
 
-please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.php.
+Please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.php.
 
 GetNebState:
 ```
