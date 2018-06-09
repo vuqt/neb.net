@@ -5,7 +5,7 @@ using NebulasAPI.Models;
 namespace NebulasAPI.Tests
 {
     [TestClass]
-    public class AccountTest
+    public class NebTest
     {
         [TestMethod]
         public void TestGetNebState()

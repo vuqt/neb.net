@@ -15,6 +15,8 @@ neb.net requires the following:
 
 ## Usage
 
+please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.php.
+
 GetNebState:
 ```
 public NebState GetNebState()
