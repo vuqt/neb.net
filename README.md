@@ -31,6 +31,62 @@ GetAccountState:
 public AccountState GetAccountState(string address, Int64 height = 0)
 ```
 
+LatestIrreversibleBlock
+```
+(in progress)
+```
+
+SendRawTransaction
+```
+(in progress)
+```
+
+GetBlockByHash
+```
+(in progress)
+```
+
+GetBlockByHeight
+```
+(in progress)
+```
+
+GetTransactionReceipt
+```
+(in progress)
+```
+
+GetTransactionByContract
+```
+(in progress)
+```
+
+GetGasPrice
+```
+(in progress)
+```
+
+EstimateGas
+```
+(in progress)
+```
+
+GetEventsByHash
+```
+(in progress)
+```
+
+Subscribe
+```
+(in progress)
+```
+
+GetDynasty
+```
+(in progress)
+```
+
+
 ## Join in!
 
 I am happy to receive bug reports, fixes, documentation enhancements, and other improvements.
