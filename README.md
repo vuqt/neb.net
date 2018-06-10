@@ -23,6 +23,7 @@ Please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.ne
 
 Please refer to [https://github.com/nebulasio/wiki/blob/master/rpc.md](https://github.com/nebulasio/wiki/blob/master/rpc.md) for more information about Nebulasio API.
 
+
 GetNebState:
 ```
 public NebState GetNebState()
