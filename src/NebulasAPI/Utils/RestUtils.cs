@@ -24,7 +24,7 @@ namespace NebulasAPI.Utils
             return response;
         }
 
-        public IRestResponse Post(string baseUrl, string resource, Dictionary<string, string> paras)
+        public IRestResponse Post(string baseUrl, string resource, Dictionary<string, object> paras)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             RestClient client = new RestClient(baseUrl);

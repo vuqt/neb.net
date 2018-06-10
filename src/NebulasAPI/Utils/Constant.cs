@@ -15,5 +15,16 @@ namespace NebulasAPI.Utils
 
         public const string LINK_GetNebState = "/user/nebstate";
         public const string LINK_GetAccountState = "/user/accountstate";
+        public const string LINK_LatestIrreversibleBlock = "/user/lib";
+        public const string LINK_SendTransactionWithPassphrase = "/admin/transactionWithPassphrase";
+        public const string LINK_GetBlockByHash = "/user/getBlockByHash";
+        public const string LINK_GetBlockByHeight = "/user/getBlockByHeight";
+        public const string LINK_GetTransactionReceipt = "/user/getTransactionReceipt";
+        public const string LINK_GetTransactionByContract = "/user/getTransactionByContract";
+        public const string LINK_GetGasPrice = "/user/getGasPrice";
+        public const string LINK_EstimateGas = "/user/estimateGas";
+        public const string LINK_GetEventsByHash = "/user/getEventsByHash";
+        public const string LINK_Subscribe = "/user/subscribe";
+        public const string LINK_GetDynasty = "/user/dynasty";
     }
 }

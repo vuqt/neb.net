@@ -6,7 +6,7 @@ Users can sign/send transactions and deploy/call smart contract with it.
 ## Requirements
 neb.net requires the following:
 
-- .NET Framework v4.5.2 or later
+- .NET Framework v4.6.1 or later
 - Newtonsoft.Json v11.0.2 or later
 - RestSharp v106.3.0 or later
 
@@ -21,6 +21,8 @@ Add [NebulasAPI.dll](/build/latest) to your project
 
 Please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.php.
 
+Please refer to [https://github.com/nebulasio/wiki/blob/master/rpc.md](https://github.com/nebulasio/wiki/blob/master/rpc.md) for more information about Nebulasio API.
+
 GetNebState:
 ```
 public NebState GetNebState()
@@ -33,57 +35,52 @@ public AccountState GetAccountState(string address, Int64 height = 0)
 
 LatestIrreversibleBlock
 ```
-(in progress)
-```
-
-SendRawTransaction
-```
-(in progress)
+public LatestIrreversibleBlock LatestIrreversibleBlock()
 ```
 
 GetBlockByHash
 ```
-(in progress)
+public IrreversibleBlock GetBlockByHash(string hash, bool full_fill_transaction)
 ```
 
 GetBlockByHeight
 ```
-(in progress)
+public IrreversibleBlock GetBlockByHeight(Int64 height, bool full_fill_transaction)
 ```
 
 GetTransactionReceipt
 ```
-(in progress)
+public TransactionReceipt GetTransactionReceipt(string hash)
 ```
 
 GetTransactionByContract
 ```
-(in progress)
+public TransactionReceipt GetTransactionByContract(string address)
 ```
 
 GetGasPrice
 ```
-(in progress)
+public GasPrice GetGasPrice()
 ```
 
 EstimateGas
 ```
-(in progress)
+public EstimateGas EstimateGas(string from, string to, string value, int nonce, string gasPrice, string gasLimit)
 ```
 
 GetEventsByHash
 ```
-(in progress)
+public EventsByHash GetEventsByHash(string hash)
 ```
 
 Subscribe
 ```
-(in progress)
+public Subscribe Subscribe(string[] topics)
 ```
 
 GetDynasty
 ```
-(in progress)
+public Dynasty GetDynasty(Int64 height)
 ```
 
 
