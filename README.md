@@ -23,6 +23,7 @@ Please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.ne
 
 Please refer to [https://github.com/nebulasio/wiki/blob/master/rpc.md](https://github.com/nebulasio/wiki/blob/master/rpc.md) for more information about Nebulasio API.
 
+####Supported Methods:
 
 GetNebState:
 ```
@@ -34,52 +35,52 @@ GetAccountState:
 public AccountState GetAccountState(string address, Int64 height = 0)
 ```
 
-LatestIrreversibleBlock
+LatestIrreversibleBlock:
 ```
 public LatestIrreversibleBlock LatestIrreversibleBlock()
 ```
 
-GetBlockByHash
+GetBlockByHash:
 ```
 public IrreversibleBlock GetBlockByHash(string hash, bool full_fill_transaction)
 ```
 
-GetBlockByHeight
+GetBlockByHeight:
 ```
 public IrreversibleBlock GetBlockByHeight(Int64 height, bool full_fill_transaction)
 ```
 
-GetTransactionReceipt
+GetTransactionReceipt:
 ```
 public TransactionReceipt GetTransactionReceipt(string hash)
 ```
 
-GetTransactionByContract
+GetTransactionByContract:
 ```
 public TransactionReceipt GetTransactionByContract(string address)
 ```
 
-GetGasPrice
+GetGasPrice:
 ```
 public GasPrice GetGasPrice()
 ```
 
-EstimateGas
+EstimateGas:
 ```
 public EstimateGas EstimateGas(string from, string to, string value, int nonce, string gasPrice, string gasLimit)
 ```
 
-GetEventsByHash
+GetEventsByHash:
 ```
 public EventsByHash GetEventsByHash(string hash)
 ```
 
-Subscribe
+Subscribe:
 ```
 public Subscribe Subscribe(string[] topics)
 ```
 
-GetDynasty
+GetDynasty:
 ```
 public Dynasty GetDynasty(Int64 height)
 ```
