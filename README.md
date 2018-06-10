@@ -19,7 +19,7 @@ Add [NebulasAPI.dll](/build/latest) to your project
 
 ## Usage
 
-Please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.php.
+Please refer to [test project](/src/NebulasAPI.Tests) to learn how to use neb.net.
 
 Please refer to [https://github.com/nebulasio/wiki/blob/master/rpc.md](https://github.com/nebulasio/wiki/blob/master/rpc.md) for more information about Nebulasio API.
 
