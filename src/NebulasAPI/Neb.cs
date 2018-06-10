@@ -199,6 +199,7 @@ namespace NebulasAPI
 
             return result;
         }*/
+
         /// <summary>
         /// Get block header info by the block hash.
         /// https://github.com/nebulasio/wiki/blob/master/rpc.md#getblockbyhash

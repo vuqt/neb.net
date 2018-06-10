@@ -1,5 +1,4 @@
-﻿using Multiformats.Hash;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,21 +24,5 @@ namespace NebulasAPI.Models
         public string gas_used { get; set; }
         public string execute_error { get; set; }
         public string execute_result { get; set; }
-
-        public void HashTransaction()
-        {
-            string hash = string.Empty;
-
-            string strHashString = this.from + this.to +
-                this.value +
-                this.nonce +
-                this.timestamp;
-
-            byte[] bytes = Multihash.Encode(strHashString, HashType.SHA3_256);
-
-            hash = Convert.ToBase64String(bytes);
-
-            this.hash = hash;
-        }
     }
 }
