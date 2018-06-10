@@ -38,6 +38,13 @@ public AccountState GetAccountState(string address, Int64 height = 0)
 public LatestIrreversibleBlock LatestIrreversibleBlock()
 ```
 
+#### SimulateCall
+```
+public SmartContractCall SimulateCall(string contractAddress, ContractInfo contractInfo,
+            string from = "n1Z6SbjLuAEXfhX1UJvXT6BB5osWYxVg3F3", string value = "0", int nonce = 3,
+            string gasPrice = "1000000", string gasLimit = "2000000")
+```
+
 #### GetBlockByHash:
 ```
 public IrreversibleBlock GetBlockByHash(string hash, bool full_fill_transaction)

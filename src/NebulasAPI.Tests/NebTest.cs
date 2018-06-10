@@ -154,18 +154,18 @@ namespace NebulasAPI.Tests
             Assert.IsTrue(result.message == string.Empty);
         }
 
-        private TransactionData GenerateTransaction()
+        [TestMethod]
+        public void TestSimulateCall()
         {
-            TransactionData transaction = new TransactionData();
+            //http://inty.co#u2355c
+            Neb neb = new Neb();
 
-            transaction.from = TESTNET_ACCOUNT;
-            transaction.to = TESTNET_ACCOUNT1;
-            transaction.value = "99000000000000000";
-            transaction.nonce = (nonce++).ToString();
-            transaction.gas_price = "1000000";
-            transaction.gas_limit = "2000000";
+            ContractInfo contractInfo = new ContractInfo();
+            contractInfo.function = "get";
+            contractInfo.args = "[\"u2355c\"]";
+            var result = neb.SimulateCall(TEST_CONTRACT_ADDRESS, contractInfo);
 
-            return transaction;
+            Assert.IsTrue(result.message == string.Empty);
         }
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="Models\EventsByHash.cs" />
     <Compile Include="Models\GasPrice.cs" />
     <Compile Include="Models\IrreversibleBlock.cs" />
+    <Compile Include="Models\SmartContractCall.cs" />
     <Compile Include="Models\Subscribe.cs" />
     <Compile Include="Models\TransactionWithPassphrase.cs" />
     <Compile Include="Models\TransactionData.cs" />

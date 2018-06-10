@@ -26,5 +26,6 @@ namespace NebulasAPI.Utils
         public const string LINK_GetEventsByHash = "/user/getEventsByHash";
         public const string LINK_Subscribe = "/user/subscribe";
         public const string LINK_GetDynasty = "/user/dynasty";
+        public const string LINK_Call = "/user/call";
     }
 }

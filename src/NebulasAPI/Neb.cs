@@ -156,27 +156,40 @@ namespace NebulasAPI
             return result;
         }
 
-        /*/// <summary>
-        /// SignTransactionWithPassphrase sign transaction. The transaction's from addrees must be unlocked before sign call.
-        /// https://github.com/nebulasio/wiki/blob/master/rpc_admin.md#signtransactionwithpassphrase
+        /// <summary>
+        /// Simulate Call a smart contract function. The smart contract must have been submited.
+        /// Simulate Call will be useful when you want to get data from a Smart Contract
+        /// https://github.com/nebulasio/wiki/blob/master/rpc.md#call
         /// </summary>
-        /// <param name="transaction">this is the same as the SendTransaction parameters</param>
-        /// <param name="passphrase">from account passphrase</param>
-        /// <returns>Signed transaction data.</returns>
-        public SendTransactionWithPassphrase SendTransactionWithPassphrase(TransactionData transaction, string passphrase)
+        /// <param name="contractAddress">Hex string of the contract addresss</param>
+        /// <param name="contractInfo">transaction contract object for call smart contract</param>
+        /// <param name="from"></param>
+        /// <param name="value"></param>
+        /// <param name="nonce"></param>
+        /// <param name="gasPrice"></param>
+        /// <param name="gasLimit"></param>
+        /// <returns></returns>
+        public SmartContractCall SimulateCall(string contractAddress, ContractInfo contractInfo,
+            string from = "n1Z6SbjLuAEXfhX1UJvXT6BB5osWYxVg3F3", string value = "0", int nonce = 3,
+            string gasPrice = "1000000", string gasLimit = "2000000")
         {
-            SendTransactionWithPassphrase result = new Models.SendTransactionWithPassphrase();
+            SmartContractCall result = new SmartContractCall();
 
             if (restUtils == null)
             {
                 restUtils = new RestUtils();
             }
 
-            string resource = string.Format("{0}{1}", API_VERSION, Constant.LINK_SendTransactionWithPassphrase);
+            string resource = string.Format("{0}{1}", API_VERSION, Constant.LINK_Call);
 
             Dictionary<string, object> paras = new Dictionary<string, object>();
-            paras.Add("transaction", transaction);
-            paras.Add("passphrase", passphrase);
+            paras.Add("to", contractAddress);
+            paras.Add("contract", contractInfo);
+            paras.Add("from", from);
+            paras.Add("value", value);
+            paras.Add("nonce", nonce);
+            paras.Add("gasPrice", gasPrice);
+            paras.Add("gasLimit", gasLimit);
 
             IRestResponse response = restUtils.Post(API_URL, resource, paras);
 
@@ -184,7 +197,7 @@ namespace NebulasAPI
             {
                 try
                 {
-                    result = JsonConvert.DeserializeObject<SendTransactionWithPassphrase>(response.Content);
+                    result = JsonConvert.DeserializeObject<SmartContractCall>(response.Content);
                     result.message = string.Empty;
                 }
                 catch (Exception ex)
@@ -198,7 +211,7 @@ namespace NebulasAPI
             }
 
             return result;
-        }*/
+        }
 
         /// <summary>
         /// Get block header info by the block hash.
