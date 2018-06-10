@@ -38,7 +38,7 @@ public AccountState GetAccountState(string address, Int64 height = 0)
 public LatestIrreversibleBlock LatestIrreversibleBlock()
 ```
 
-#### SimulateCall
+#### SimulateCall:
 ```
 public SmartContractCall SimulateCall(string contractAddress, ContractInfo contractInfo,
             string from = "n1Z6SbjLuAEXfhX1UJvXT6BB5osWYxVg3F3", string value = "0", int nonce = 3,
