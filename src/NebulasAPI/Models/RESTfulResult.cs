@@ -9,5 +9,10 @@ namespace NebulasAPI.Models
     public class RESTfulResult
     {
         public string message { get; set; }
+
+        public override string ToString()
+        {
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
+        }
     }
 }
