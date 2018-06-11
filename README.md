@@ -1,7 +1,6 @@
 # neb.net
 
-neb.net is the Nebulas compatible C# API. 
-Users can sign/send transactions and deploy/call smart contract with it.
+neb.net is the Nebulas compatible C# API.
 
 ## Requirements
 neb.net requires the following:
